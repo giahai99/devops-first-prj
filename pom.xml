@@ -14,9 +14,9 @@
     <name>devops-first-prj</name>
     <description>devops-first-prj</description>
     <properties>
-        <java.version>11</java.version>
-    </properties>
-    <dependencies>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>    <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
