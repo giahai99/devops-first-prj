@@ -40,7 +40,8 @@ CREATE TABLE `book` (
 LOCK TABLES `book` WRITE;
 /*!40000 ALTER TABLE `book` DISABLE KEYS */;
 INSERT INTO `book` VALUES (1, 'The Alchemist', 6.87, 'Paulo Coelho', 600, 'Adventure');
-INSERT INTO `book` VALUES (2, 'harry potter and the chamber of secrets', 9.87, 'J.K. Rowling', 700, 'Fantasy');
+INSERT INTO `book` VALUES (2, 'Harry potter and the chamber of secrets', 9.87, 'J.K. Rowling', 700, 'Fantasy');
+INSERT INTO `book` VALUES (3, 'Don Quixote', 10.22, 'Miguel de Cervantes', 324, 'Adventure');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
