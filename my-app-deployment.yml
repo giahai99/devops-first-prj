@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,6 +17,19 @@ spec:
     spec:
       containers:
       - name: my-book-management
-        image: giahai99/javaapp:2.0
+        image: giahai99/javaapp:3.0
         ports:
-        - containerPort: 8080
+          - containerPort: 8080
+        env:    # Setting Environmental Varialbles
+          - name: DB_HOST  # Setting Database host address
+            value: mysql
+          - name: DB_NAME  # Setting Database name
+            value: book_manager
+          - name: DB_USERNAME  # Setting Database username
+            value: root
+          - name: DB_PASSWORD  # Setting Database password
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secret
+                key: password
+---
