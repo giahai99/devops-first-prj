@@ -14,7 +14,7 @@ import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("Book/")
+@RequestMapping("BookSell/")
 public class BookController {
     @Autowired
     private BookRepository bookRepository;
