@@ -26,10 +26,13 @@ spec:
           - name: DB_NAME  # Setting Database name
             value: book_manager
           - name: DB_USERNAME  # Setting Database username
-            value: root
+            valueFrom:
+              secretKeyRef:
+                name: db-user-pass
+                key: username
           - name: DB_PASSWORD  # Setting Database password
             valueFrom:
               secretKeyRef:
-                name: mysql-secret
+                name: db-user-pass
                 key: password
 ---
