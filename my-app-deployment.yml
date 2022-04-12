@@ -22,9 +22,15 @@ spec:
           - containerPort: 8080
         env:    # Setting Environmental Varialbles
           - name: DB_HOST  # Setting Database host address
-            value: mysql
+            valueFrom:
+              configMapKeyRef:
+                name: mysql-configmap
+                key: db_host
           - name: DB_NAME  # Setting Database name
-            value: book_manager
+            valueFrom:
+              configMapKeyRef:
+                name: mysql-configmap
+                key: db_name
           - name: DB_USERNAME  # Setting Database username
             valueFrom:
               secretKeyRef:
